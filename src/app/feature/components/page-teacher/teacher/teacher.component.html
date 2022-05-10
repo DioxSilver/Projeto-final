@@ -1,0 +1,10 @@
+
+<div>
+    <h3>Informações dos professores</h3>
+    <input type="text"placeholder="digitar o nome do professor"
+    (keyup)="filterTeacher($event)">
+</div>
+
+<div>
+    <app-teachers *ngFor="let item of filteredTeacher "[teacher]="item"></app-teachers>
+</div>

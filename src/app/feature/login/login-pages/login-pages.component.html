@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div>
+    <h4>Seja bem vindo! Digite seu usuário/senha para acessar ao sistema  </h4>
+    <form class="login-form">
+        {{email}}
+        {{passeword}}
+        <div class="form-field">
+              <input type="email" [(ngModel)]="email" placeholder="Digite o Email" name="email" required>
+        </div>
+        <div class="form-field">
+            <input type="email" [(ngModel)]="passeword" placeholder="Digite o Email"name="passeword" required>
+        </div>
+        <p class="erro" *ngIf="error">usuário ou senha inválidos, tente novamente! </p>
+    </form>
+    <button class="pimary-button"
+    type="button"
+    [disabled]="!email || !passeword"
+    (click)="authenticate()">Conectar</button>
+</div>
+<app-footer></app-footer>

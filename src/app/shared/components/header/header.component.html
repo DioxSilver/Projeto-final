@@ -1,0 +1,8 @@
+<ul appColor class="container2">
+    <li (click)="navigateByUrl('/login')" *ngIf="!teacher" >login</li>
+    <li (click)="navigateByUrl('/cadastro')" *ngIf="!teacher" >cadastro</li>
+    <li (click)="navigateByUrl('/professores')" *ngIf="teacher">Professores</li>
+    <li (click)="navigateByUrl('/alunos')" *ngIf="teacher">Alunos</li>
+    <li *ngIf="teacher" (click)="exit()">Sair</li>
+
+</ul>
